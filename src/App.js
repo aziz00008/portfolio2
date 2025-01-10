@@ -1,16 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        {/* Other routes */}
-      </Switch>
-    </Router>,
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+     <App />
+   </BrowserRouter>,
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
